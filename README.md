@@ -3,16 +3,16 @@ basic Attendance Tracker application developed in Python. The system utilizes th
 
 #CODES
 
-  import csv
-  from datetime import datetime
+   import csv
+   from datetime import datetime
 
-  filename = "attendance.csv"
+   filename = "attendance.csv"
 
-  try:
+   try:
      with open(filename, "x", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["Date", "Student Name", "Status"])
-  except:
+   except:
     pass
 
   def mark_attendance():
@@ -32,7 +32,7 @@ basic Attendance Tracker application developed in Python. The system utilizes th
 
     print("Attendance marked successfully!\n")
 
-  def show_attendance():
+   def show_attendance():
     print("\n--- Attendance Records ---")
     with open(filename, "r") as f:
         for line in f:
@@ -40,7 +40,7 @@ basic Attendance Tracker application developed in Python. The system utilizes th
     print("--------------------------\n")
 
 
-  while True:
+   while True:
     print("1. Mark Attendance")
     print("2. Show Attendance")
     print("3. Exit")
